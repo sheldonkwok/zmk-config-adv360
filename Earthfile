@@ -14,7 +14,7 @@ build:
 
   RUN --mount=type=cache,target=/root/.cache/zephyr --mount=type=cache,target=/opt/build/left \
     west build -s zmk/app -d build/left -b adv360_left -- -DZMK_CONFIG="/opt/config" && \
-    mv /opt/build/left/zephyr/zmk.uf2 /opt/left.uf2
+    mv /opt/build/left/zephyr/zmk.uf2 /opt/left.uf2 
 
   SAVE ARTIFACT /opt/left.uf2 AS LOCAL left.uf2
   
